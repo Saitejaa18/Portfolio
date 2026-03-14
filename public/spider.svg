@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Anatomical Mask Shell -->
+  <path d="M60 2 C32 2, 12 22, 12 58 C12 82, 35 112, 60 116 C85 112, 108 82, 108 58 C108 22, 88 2, 60 2 Z" fill="#CC0000" stroke="#000" stroke-width="2.5" />
+  
+  <!-- Webbing Pattern -->
+  <g opacity="0.4">
+    <line x1="60" y1="52" x2="60" y2="2" stroke="#000" stroke-width="1"/>
+    <line x1="60" y1="52" x2="108" y2="58" stroke="#000" stroke-width="1"/>
+    <line x1="60" y1="52" x2="12" y2="58" stroke="#000" stroke-width="1"/>
+    <line x1="60" y1="52" x2="60" y2="116" stroke="#000" stroke-width="1"/>
+    
+    <path d="M30 35 Q60 22 90 35" fill="none" stroke="#000" stroke-width="1" />
+    <path d="M18 52 Q60 40 102 52" fill="none" stroke="#000" stroke-width="1" />
+    <path d="M15 72 Q60 65 105 72" fill="none" stroke="#000" stroke-width="1" />
+    <path d="M28 98 Q60 108 92 98" fill="none" stroke="#000" stroke-width="1" />
+  </g>
+
+  <!-- Eyes -->
+  <path d="M16 52 C24 34, 46 34, 56 52 C46 72, 30 76, 16 52 Z" fill="#000" />
+  <path d="M21 53 C28 40, 42 40, 51 53 C42 66, 28 68, 21 53 Z" fill="#fff" />
+  
+  <path d="M104 52 C96 34, 74 34, 64 52 C74 72, 90 76, 104 52 Z" fill="#000" />
+  <path d="M99 53 C92 40, 78 40, 69 53 C78 66, 92 68, 99 53 Z" fill="#fff" />
+</svg>

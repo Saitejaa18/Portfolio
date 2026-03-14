@@ -5,17 +5,11 @@
 .certs-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    /* Enforce 4 items side-by-side */
     gap: 30px;
-    /* Increase gap slightly for larger cards */
     margin: 0 auto;
-    width: 150%;
-    /* Use percentage so they scale up wider */
-    max-width: 2000px;
-    /* Massive max-width to allow cards to scale up infinitely on large screens */
+    width: 100%;
+    max-width: 1400px;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .cert-card {

@@ -82,7 +82,7 @@ export default function Hero() {
 
                 <h2 className="hero-quote" id="hero-quote">
                     With Great Skills<br />
-                    <span className="web-text">Comes Great Responsibility</span>
+                    <span className="web-text">Comes Great Responsibilities</span>
                 </h2>
 
                 <div className="hero-role-wrap" id="hero-role-wrap">
