@@ -1,0 +1,173 @@
+#skills {
+    background: radial-gradient(ellipse at 70% 50%, rgba(21, 101, 192, 0.06) 0%, transparent 60%);
+    overflow: hidden;
+}
+
+.skills-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 600px;
+    perspective: 1000px;
+}
+
+.skill-orb {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    will-change: transform, opacity;
+}
+
+.skill-icon-img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    transition: all 0.4s ease;
+}
+
+.skill-orb:hover .skill-icon-img {
+    filter: drop-shadow(0 6px 20px rgba(255, 255, 255, 0.5)) brightness(1.1);
+    transform: scale(1.1);
+}
+
+/* Category-based colors */
+.skill-languages {
+    background: linear-gradient(135deg, rgba(204, 0, 0, 0.1), rgba(204, 0, 0, 0.02));
+    border-color: rgba(204, 0, 0, 0.3);
+    box-shadow: 0 0 30px rgba(204, 0, 0, 0.2), inset 0 0 20px rgba(204, 0, 0, 0.05);
+}
+
+.skill-aiml {
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.02));
+    border-color: rgba(255, 215, 0, 0.3);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.05);
+}
+
+.skill-cloud {
+    background: linear-gradient(135deg, rgba(21, 101, 192, 0.1), rgba(21, 101, 192, 0.02));
+    border-color: rgba(21, 101, 192, 0.3);
+    box-shadow: 0 0 30px rgba(21, 101, 192, 0.2), inset 0 0 20px rgba(21, 101, 192, 0.05);
+}
+
+.skill-libraries {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1), rgba(168, 85, 247, 0.02));
+    border-color: rgba(168, 85, 247, 0.3);
+    box-shadow: 0 0 30px rgba(168, 85, 247, 0.2), inset 0 0 20px rgba(168, 85, 247, 0.05);
+}
+
+.skill-orb:hover {
+    transform: scale(1.15) translateZ(20px);
+    z-index: 10;
+    box-shadow: 0 0 60px rgba(255, 255, 255, 0.4), 0 0 100px rgba(204, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.skill-icon {
+    font-size: 3rem;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    animation: iconGlow 3s ease-in-out infinite;
+}
+
+@keyframes iconGlow {
+    0%, 100% {
+        filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3)) brightness(1);
+    }
+    50% {
+        filter: drop-shadow(0 4px 20px rgba(255, 255, 255, 0.4)) brightness(1.1);
+    }
+}
+
+.skill-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    max-width: 90%;
+    line-height: 1.2;
+}
+
+/* Responsive positioning */
+@media (min-width: 1200px) {
+    .skill-orb:nth-child(1) { top: 0%; left: 10%; }
+    .skill-orb:nth-child(2) { top: 8%; left: 25%; }
+    .skill-orb:nth-child(3) { top: 3%; left: 40%; }
+    .skill-orb:nth-child(4) { top: 12%; left: 55%; }
+    .skill-orb:nth-child(5) { top: 2%; left: 70%; }
+    .skill-orb:nth-child(6) { top: 10%; left: 85%; }
+    .skill-orb:nth-child(7) { top: 25%; left: 15%; }
+    
+    .skill-orb:nth-child(8) { top: 22%; left: 35%; }
+    .skill-orb:nth-child(9) { top: 28%; left: 50%; }
+    .skill-orb:nth-child(10) { top: 24%; left: 65%; }
+    .skill-orb:nth-child(11) { top: 30%; left: 80%; }
+    .skill-orb:nth-child(12) { top: 32%; left: 90%; }
+    
+    .skill-orb:nth-child(13) { top: 45%; left: 10%; }
+    .skill-orb:nth-child(14) { top: 42%; left: 28%; }
+    .skill-orb:nth-child(15) { top: 48%; left: 42%; }
+    .skill-orb:nth-child(16) { top: 45%; left: 58%; }
+    .skill-orb:nth-child(17) { top: 50%; left: 72%; }
+    .skill-orb:nth-child(18) { top: 40%; left: 88%; }
+    
+    .skill-orb:nth-child(19) { top: 65%; left: 15%; }
+    .skill-orb:nth-child(20) { top: 62%; left: 32%; }
+    .skill-orb:nth-child(21) { top: 68%; left: 48%; }
+    .skill-orb:nth-child(22) { top: 65%; left: 65%; }
+    .skill-orb:nth-child(23) { top: 70%; left: 82%; }
+    .skill-orb:nth-child(24) { top: 60%; left: 92%; }
+    
+    .skill-orb:nth-child(25) { top: 80%; left: 20%; }
+    .skill-orb:nth-child(26) { top: 78%; left: 40%; }
+    .skill-orb:nth-child(27) { top: 82%; left: 60%; }
+    .skill-orb:nth-child(28) { top: 75%; left: 78%; }
+}
+
+@media (max-width: 1199px) {
+    .skill-orb {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .skill-icon {
+        font-size: 2.5rem;
+    }
+    
+    .skill-label {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        min-height: 800px;
+    }
+    
+    .skill-orb {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .skill-icon {
+        font-size: 2rem;
+    }
+    
+    .skill-label {
+        font-size: 0.65rem;
+    }
+}

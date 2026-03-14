@@ -1,0 +1,137 @@
+#certifications {
+    background: transparent;
+}
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* Enforce 4 items side-by-side */
+    gap: 30px;
+    /* Increase gap slightly for larger cards */
+    margin: 0 auto;
+    width: 150%;
+    /* Use percentage so they scale up wider */
+    max-width: 2000px;
+    /* Massive max-width to allow cards to scale up infinitely on large screens */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cert-card {
+    border-radius: 12px;
+    background: #1a2235;
+    /* Navy flat background matching reference UI */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    background: #1e283f;
+}
+
+/* Image section */
+.cert-image-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    /* Standard landscape ratio */
+    background: #fff;
+    /* Most certs have white backgrounds, fallback to white */
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cert-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    /* Important for seeing the title of the cert if it gets cropped */
+    transition: transform 0.4s ease;
+}
+
+.cert-card:hover .cert-image {
+    transform: scale(0.95);
+}
+
+/* Text Section */
+.cert-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Pushes meta down if content varies */
+}
+
+.cert-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.cert-issuer {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #4CAF50;
+    /* Light greenish-blue from reference if it matches, or plain blue */
+    color: #42A5F5;
+    /* Standard blue matches the reference image better */
+    margin-bottom: 16px;
+    display: block;
+}
+
+.cert-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: auto;
+}
+
+.cert-id,
+.cert-date {
+    font-size: 0.85rem;
+    color: #79839c;
+    /* Subtle grey matching reference */
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Centered Title fix */
+h2.section-title.text-center {
+    color: #fff;
+}
+
+h2.section-title.text-center::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #00B4D8;
+    /* Light blue accent underline */
+    margin: 16px auto 0;
+    border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .certs-grid {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 650px) {
+    .certs-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+}

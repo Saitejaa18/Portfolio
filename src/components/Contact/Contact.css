@@ -1,0 +1,197 @@
+#contact {
+    background: radial-gradient(ellipse at 50% 100%, rgba(204, 0, 0, 0.07) 0%, transparent 60%);
+    padding-top: 100px;
+}
+
+.contact-comic-title {
+    font-family: 'Bangers', sans-serif !important;
+    font-size: clamp(3rem, 8vw, 6rem) !important;
+    color: #ffffff;
+    letter-spacing: 0.05em;
+    font-style: italic;
+    -webkit-text-stroke: 2.5px #111111;
+    text-shadow:
+        3px 3px 0 #ff1744,
+        4px 4px 0 #ff1744,
+        5px 5px 0 #ff1744,
+        6px 6px 0 #ff1744,
+        7px 7px 0 #ff1744;
+    margin-bottom: 0.5rem !important;
+    line-height: 1.2 !important;
+}
+
+.contact-comic-sub {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.5rem) !important;
+    color: var(--white-80);
+    margin-bottom: 60px !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: clamp(40px, 6vw, 80px);
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 20px;
+    border-radius: 14px;
+    border-color: rgba(204, 0, 0, 0.12) !important;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.contact-item:hover {
+    border-color: rgba(204, 0, 0, 0.4) !important;
+    box-shadow: 0 0 24px rgba(204, 0, 0, 0.2);
+    transform: translateX(5px);
+}
+
+/* ── SVG icon circle (matches reference image) ── */
+.ci-icon-wrap {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: rgba(6, 14, 35, 0.85);
+    border: 1.5px solid rgba(59, 130, 246, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3b82f6;
+    transition: border-color 0.35s, box-shadow 0.35s, transform 0.35s, background 0.35s;
+}
+
+.ci-icon-wrap svg {
+    width: 28px;
+    height: 28px;
+    stroke: #3b82f6;
+    transition: stroke 0.3s;
+}
+
+.contact-item:hover .ci-icon-wrap {
+    background: rgba(59, 130, 246, 0.12);
+    border-color: rgba(59, 130, 246, 0.7);
+    box-shadow: 0 0 18px rgba(59, 130, 246, 0.4), 0 0 6px rgba(59, 130, 246, 0.3) inset;
+    transform: scale(1.08);
+}
+
+.contact-item:hover .ci-icon-wrap svg {
+    stroke: #60a5fa;
+}
+
+/* Text block next to icon */
+.ci-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.contact-item strong {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.contact-item a,
+.contact-item span {
+    font-size: 1.1rem;
+    color: #E53935;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: #FFD700;
+}
+
+/* Form */
+.contact-form {
+    border-radius: 22px;
+    padding: clamp(24px, 4vw, 40px);
+    border-color: rgba(204, 0, 0, 0.12) !important;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 8px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 13px 16px;
+    color: #fff;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.94rem;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #CC0000;
+    box-shadow: 0 0 0 3px rgba(204, 0, 0, 0.15);
+}
+
+.form-success {
+    margin-top: 14px;
+    text-align: center;
+    padding: 12px;
+    color: #CC0000;
+    font-weight: 600;
+    background: rgba(204, 0, 0, 0.07);
+    border: 1px solid rgba(204, 0, 0, 0.2);
+    border-radius: 10px;
+    animation: fadeSucc 0.4s ease;
+}
+
+@keyframes fadeSucc {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

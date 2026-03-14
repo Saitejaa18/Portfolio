@@ -1,0 +1,157 @@
+#experience {
+    background: radial-gradient(ellipse at 30% 50%, rgba(204, 0, 0, 0.05) 0%, transparent 60%);
+}
+
+/* Timeline container */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+/* Vertical spine */
+.tl-line {
+    position: absolute;
+    left: 22px;
+    top: 20px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #CC0000, #1565C0, transparent);
+    opacity: 0.5;
+}
+
+/* Each timeline item */
+.tl-item {
+    position: relative;
+    margin-bottom: 48px;
+}
+
+/* Dot node */
+.tl-dot {
+    position: absolute;
+    left: -52px;
+    top: 20px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.tl-work .tl-dot {
+    border-color: rgba(204, 0, 0, 0.4) !important;
+    box-shadow: 0 0 20px rgba(204, 0, 0, 0.3);
+}
+
+.tl-edu .tl-dot {
+    border-color: rgba(21, 101, 192, 0.4) !important;
+    box-shadow: 0 0 20px rgba(21, 101, 192, 0.3);
+}
+
+.tl-icon {
+    font-size: 1.2rem;
+}
+
+/* Card */
+.tl-card {
+    border-radius: 16px;
+    padding: 24px 28px;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.tl-card:hover {
+    transform: translateX(6px);
+    box-shadow: 0 8px 40px rgba(204, 0, 0, 0.15);
+    border-color: rgba(204, 0, 0, 0.3) !important;
+}
+
+.tl-work .tl-card:hover {
+    border-color: rgba(204, 0, 0, 0.35) !important;
+}
+
+.tl-edu .tl-card:hover {
+    border-color: rgba(21, 101, 192, 0.35) !important;
+}
+
+/* Card header */
+.tl-header {
+    margin-bottom: 12px;
+}
+
+.tl-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.tl-badge {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 100px;
+}
+
+.tl-work .tl-badge {
+    background: rgba(204, 0, 0, 0.15);
+    color: #E53935;
+    border: 1px solid rgba(204, 0, 0, 0.3);
+}
+
+.tl-edu .tl-badge {
+    background: rgba(21, 101, 192, 0.15);
+    color: #42A5F5;
+    border: 1px solid rgba(21, 101, 192, 0.3);
+}
+
+.tl-period {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 0.05em;
+}
+
+.tl-title {
+    font-family: 'Bangers', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    font-style: italic;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.tl-place {
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+.tl-desc {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.7;
+    margin-bottom: 14px;
+}
+
+/* Tags */
+.tl-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tl-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.04em;
+}
