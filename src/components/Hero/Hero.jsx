@@ -82,7 +82,7 @@ export default function Hero() {
 
                 <h2 className="hero-quote" id="hero-quote">
                     With Great Skills<br />
-                    <span className="web-text">Comes Great Responsibilities</span>
+                    <span className="web-text">Comes Great Responsibility</span>
                 </h2>
 
                 <div className="hero-role-wrap" id="hero-role-wrap">
@@ -104,6 +104,9 @@ export default function Hero() {
                         </svg>
                     </a>
                     <a href="#contact" className="btn btn-ghost">Hire Me 🕷️</a>
+                    <button className="btn btn-ghost" onClick={() => window.dispatchEvent(new Event('open-resume'))}>
+                        View Resume 📄
+                    </button>
                 </div>
 
                 <div className="hero-scroll-hint">

@@ -84,9 +84,18 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                <a href="#contact" className="nav-cta" onClick={(e) => scrollTo(e, '#contact')}>
-                    Hire Me
-                </a>
+                <div style={{display: 'flex', gap: '12px', alignItems: 'center'}}>
+                    <button 
+                        className="nav-cta" 
+                        style={{background: 'transparent', border: '1px solid var(--red)', color: 'var(--red-bright)'}}
+                        onClick={() => window.dispatchEvent(new Event('open-resume'))}
+                    >
+                        Resume
+                    </button>
+                    <a href="#contact" className="nav-cta" onClick={(e) => scrollTo(e, '#contact')}>
+                        Hire Me
+                    </a>
+                </div>
 
                 <button
                     className="nav-hamburger"
@@ -110,6 +119,14 @@ export default function Navbar() {
                             </a>
                         </li>
                     ))}
+                    <li>
+                        <button className="mobile-link" style={{background: 'none', border: 'none'}} onClick={() => {
+                            setMenuOpen(false);
+                            setTimeout(() => window.dispatchEvent(new Event('open-resume')), 300);
+                        }}>
+                            Resume
+                        </button>
+                    </li>
                 </ul>
             </div>
         </>
