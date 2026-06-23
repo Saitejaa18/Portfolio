@@ -27,7 +27,7 @@ const journey = [
     {
         type: 'work',
         icon: '💼',
-        period: 'May 2025 — Present',
+        period: 'May 2025 — May 2026',
         title: 'Full Stack AI Intern',
         place: 'X360 Technologies · Canada (Remote)',
         desc: 'Built backend APIs using Python and Node.js for an AI test automation platform. Developed React dashboards for analytics and monitoring. Designed scalable Cosmos DB data models and worked in Agile teams using Jira.',
