@@ -13,11 +13,12 @@
 /* Sidebar with avatar */
 .about-sidebar {
     position: sticky;
-    top: calc(var(--nav-h) + 40px);
+    top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 24px;
+    z-index: 10;
 }
 
 .about-avatar-wrap {
@@ -380,43 +381,89 @@
 @media (max-width: 900px) {
     .about-layout {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 40px;
     }
 
     .about-sidebar {
         position: relative;
         top: auto;
         order: -1;
+        margin-bottom: 20px;
     }
+
+    .about-avatar-wrap {
+        width: 240px;
+        height: 240px;
+    }
+
+    .spider-mask-icon {
+        width: 150px;
+        height: 150px;
+    }
+
+    .ring-1 { width: 190px; height: 190px; }
+    .ring-2 { width: 230px; height: 230px; }
 
     .about-links {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
+        max-width: 100%;
     }
 
     .timeline {
-        padding-left: 20px;
+        padding-left: 10px;
     }
 
     .tl-line {
         left: 20px;
     }
 
+    .tl-item {
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
     .tl-dot {
-        width: 50px;
-        height: 50px;
+        width: 46px;
+        height: 46px;
     }
 
     .tl-icon {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .tl-card {
-        padding: 24px;
+        padding: 20px;
     }
 
     .tl-title {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+
+    .tl-desc {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-avatar-wrap {
+        width: 200px;
+        height: 200px;
+    }
+    .spider-mask-icon {
+        width: 120px;
+        height: 120px;
+    }
+    .ring-1 { width: 160px; height: 160px; }
+    .ring-2 { width: 190px; height: 190px; }
+
+    .tl-period {
+        font-size: 0.75rem;
+    }
+    
+    .tl-title {
+        font-size: 1.2rem;
     }
 }

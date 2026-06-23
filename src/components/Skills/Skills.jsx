@@ -45,17 +45,14 @@ export default function Skills() {
         const ctx = gsap.context(() => {
             // Animate skill orbs on scroll
             gsap.fromTo('.skill-orb', 
-                { opacity: 0, scale: 0 },
+                { opacity: 0, scale: 0.5, y: 30 },
                 {
                     scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
                     opacity: 1,
                     scale: 1,
-                    stagger: {
-                        amount: 1.5,
-                        grid: [4, 6],
-                        from: 'random'
-                    },
-                    duration: 0.8,
+                    y: 0,
+                    stagger: 0.05,
+                    duration: 0.6,
                     ease: 'back.out(1.7)'
                 }
             )
