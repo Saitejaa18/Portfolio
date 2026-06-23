@@ -101,10 +101,12 @@ export default function Projects() {
     useEffect(() => {
         // Calculate dynamic radius: Front card perfectly fits bounds when carousel pivots at -radius.
         const calcRadius = () => {
-            const width = Math.min(window.innerWidth * 0.5, 700); // Max card width horizontally 50%
+            const isNarrow = window.innerWidth < 1000;
+            // Match the new smaller CSS width
+            const containerWidth = isNarrow ? window.innerWidth * 0.8 : Math.min(window.innerWidth * 0.6, 600);
+            
             // R = (W/2) / tan(PI / N)
-            // Reduced appended value from +60 to +10 to pull cards closer together along the Z-axis
-            setRadius((width / 2) / Math.tan(Math.PI / projects.length) + 10);
+            setRadius((containerWidth / 2) / Math.tan(Math.PI / projects.length) + (isNarrow ? 20 : 15));
         }
         calcRadius();
         window.addEventListener('resize', calcRadius);
@@ -200,7 +202,7 @@ export default function Projects() {
                     <span className="label-line" />
                     <span>05 / PROJECTS</span>
                 </div>
-                <h2 className="section-title text-center">Featured <span className="gradient-text">Work</span></h2>
+                <h2 className="section-title text-center">My <span className="gradient-text">Projects</span></h2>
                 <p className="section-sub text-center" style={{ marginBottom: '40px' }}>AI-powered and full-stack projects that make a real-world impact</p>
 
                 <div

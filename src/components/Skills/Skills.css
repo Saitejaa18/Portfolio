@@ -6,16 +6,16 @@
 .skills-container {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    min-height: 600px;
-    perspective: 1000px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    perspective: 1200px;
 }
 
 .skill-orb {
-    position: absolute;
-    width: 140px;
-    height: 140px;
+    aspect-ratio: 1;
     border-radius: 50%;
     display: flex;
     flex-direction: column;
@@ -103,71 +103,39 @@
 }
 
 /* Responsive positioning */
-@media (min-width: 1200px) {
-    .skill-orb:nth-child(1) { top: 0%; left: 10%; }
-    .skill-orb:nth-child(2) { top: 8%; left: 25%; }
-    .skill-orb:nth-child(3) { top: 3%; left: 40%; }
-    .skill-orb:nth-child(4) { top: 12%; left: 55%; }
-    .skill-orb:nth-child(5) { top: 2%; left: 70%; }
-    .skill-orb:nth-child(6) { top: 10%; left: 85%; }
-    .skill-orb:nth-child(7) { top: 25%; left: 15%; }
-    
-    .skill-orb:nth-child(8) { top: 22%; left: 35%; }
-    .skill-orb:nth-child(9) { top: 28%; left: 50%; }
-    .skill-orb:nth-child(10) { top: 24%; left: 65%; }
-    .skill-orb:nth-child(11) { top: 30%; left: 80%; }
-    .skill-orb:nth-child(12) { top: 32%; left: 90%; }
-    
-    .skill-orb:nth-child(13) { top: 45%; left: 10%; }
-    .skill-orb:nth-child(14) { top: 42%; left: 28%; }
-    .skill-orb:nth-child(15) { top: 48%; left: 42%; }
-    .skill-orb:nth-child(16) { top: 45%; left: 58%; }
-    .skill-orb:nth-child(17) { top: 50%; left: 72%; }
-    .skill-orb:nth-child(18) { top: 40%; left: 88%; }
-    
-    .skill-orb:nth-child(19) { top: 65%; left: 15%; }
-    .skill-orb:nth-child(20) { top: 62%; left: 32%; }
-    .skill-orb:nth-child(21) { top: 68%; left: 48%; }
-    .skill-orb:nth-child(22) { top: 65%; left: 65%; }
-    .skill-orb:nth-child(23) { top: 70%; left: 82%; }
-    .skill-orb:nth-child(24) { top: 60%; left: 92%; }
-    
-    .skill-orb:nth-child(25) { top: 80%; left: 20%; }
-    .skill-orb:nth-child(26) { top: 78%; left: 40%; }
-    .skill-orb:nth-child(27) { top: 82%; left: 60%; }
-    .skill-orb:nth-child(28) { top: 75%; left: 78%; }
-}
+/* Removed Absolute Positions for Grid Flow */
 
-@media (max-width: 1199px) {
-    .skill-orb {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .skill-icon {
-        font-size: 2.5rem;
-    }
-    
-    .skill-label {
-        font-size: 0.7rem;
+
+@media (max-width: 1100px) {
+    .skills-container {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
     }
 }
 
 @media (max-width: 768px) {
     .skills-container {
-        min-height: 800px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
-    
     .skill-orb {
-        width: 100px;
-        height: 100px;
+        gap: 4px;
     }
-    
-    .skill-icon {
-        font-size: 2rem;
+    .skill-icon-img {
+        width: 42px;
+        height: 42px;
     }
-    
     .skill-label {
         font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .skill-label {
+        font-size: 0.6rem;
     }
 }
